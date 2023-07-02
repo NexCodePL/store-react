@@ -2,15 +2,13 @@ import { useRef, useEffect } from "react";
 import { StoreEffect, StoreEffectDestructor, StoreEffectFunction } from "@nexcodepl/store";
 import { StoreEffectDependenciesList } from "./types.js";
 import { getDependencies } from "./utils.js";
+import { useRefStatic } from "./useRefStatic.js";
 
 export function useStoreEffect(effect: StoreEffectFunction, dependencies: StoreEffectDependenciesList) {
     const { storeDependencies, nonStoreDependencies } = getDependencies(dependencies);
 
     const effectDestructorRef = useRef<StoreEffectDestructor | undefined>(undefined);
-    const effectRef = useRef<StoreEffect>(null as unknown as StoreEffect);
-    if (effectRef.current === null) {
-        effectRef.current = new StoreEffect(() => callEffect(), storeDependencies);
-    }
+    const effectRef = useRefStatic<StoreEffect>(() => new StoreEffect(() => callEffect(), storeDependencies));
 
     useEffect(callEffect, nonStoreDependencies);
 

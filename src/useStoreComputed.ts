@@ -1,12 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { StoreComputed } from "@nexcodepl/store";
+import { useRefStatic } from "./useRefStatic.js";
 
 export function useStoreComputed<T>(...args: ConstructorParameters<typeof StoreComputed<T>>) {
-    const storeComputedRef = useRef<StoreComputed<T>>(null as unknown as StoreComputed<T>);
-
-    if (storeComputedRef.current === null) {
-        storeComputedRef.current = new StoreComputed<T>(...args);
-    }
+    const storeComputedRef = useRefStatic<StoreComputed<T>>(() => new StoreComputed<T>(...args));
 
     useEffect(() => {
         storeComputedRef.current.dependenciesSubscribe();

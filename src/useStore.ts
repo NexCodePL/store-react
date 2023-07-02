@@ -1,8 +1,8 @@
 import { Store } from "@nexcodepl/store";
-import { useRef } from "react";
+import { useRefStatic } from "./useRefStatic.js";
 
 export function useStore<T>(...args: ConstructorParameters<typeof Store<T>>) {
-    const storeRef = useRef<Store<T>>(new Store<T>(...args));
+    const storeRef = useRefStatic<Store<T>>(() => new Store<T>(...args));
 
     return storeRef.current;
 }
