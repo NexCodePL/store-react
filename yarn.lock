@@ -53,10 +53,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@nexcodepl/store@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@nexcodepl/store/-/store-1.0.1.tgz#20a18807379ec192b53e7f98a2cd3d014749be57"
-  integrity sha512-jnvx28oKR21FgC1ZdowafOOAnjIJ5/+J2/8DXfX8NJPIHFzN6w3Yh8zDX48IZd4UcXzPJ9blhqlEmtY9igS+pA==
+"@nexcodepl/store@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@nexcodepl/store/-/store-1.0.2.tgz#f0e553e9b1528cad3e2944a66b60fb35fada1df6"
+  integrity sha512-GwHDkZgncFVZOJC4QzL1lZwh27H+jlRYDTxuNvODyiSDlbrpm+kqrRXX8HnQ/dbg4+XgboBEjVpEnJDOBfYwJg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
