@@ -1,6 +1,6 @@
 {
     "name": "@nexcodepl/store-react",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "React utils for @nexcodepl/store",
     "main": "./dist/index.js",
     "typings": "./dist/index.d.ts",
@@ -15,7 +15,7 @@
         "store"
     ],
     "scripts": {
-        "build": "tsc",
+        "build": "tsc --build --force",
         "format": "yarn prettier --write \"src/**/*.ts\"",
         "lint": "yarn eslint . --ext .ts",
         "prepare": "yarn build",
@@ -26,7 +26,7 @@
         "publish:npm": "npm publish --access public"
     },
     "dependencies": {
-        "@nexcodepl/store": "^1.0.6",
+        "@nexcodepl/store": "^1.0.7",
         "react": "^18.2.0"
     },
     "devDependencies": {
