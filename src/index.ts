@@ -3,6 +3,7 @@ export * from "./types.js";
 export * from "./useRefStatic.js";
 export * from "./useStore.js";
 export * from "./useStoreComputed.js";
+export * from "./useStoreComputedWithDeps.js";
 export * from "./useStoreEffect.js";
 export * from "./useStoreState.js";
 export * from "./utils.js";
