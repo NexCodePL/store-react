@@ -10,7 +10,10 @@ export function useStoreEffect(effect: StoreEffectFunction, dependencies: StoreE
     const effectDestructorRef = useRef<StoreEffectDestructor | undefined>(undefined);
     const effectRef = useRefStatic<StoreEffect>(() => new StoreEffect(() => callEffect(), storeDependencies));
 
-    useEffect(callEffect, nonStoreDependencies);
+    useEffect(() => {
+        if (nonStoreDependencies.length === 0) return;
+        return callEffect();
+    }, nonStoreDependencies);
 
     useEffect(() => {
         effectRef.current.dependenciesSubscribe();
